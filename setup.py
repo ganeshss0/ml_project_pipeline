@@ -8,7 +8,7 @@ def get_requirements(file_path:str)->List[str]:
     with open(file_path) as file:
         requirements = file.readlines()
     
-    return [require.stip() for require in requirements if not HYPEN_E_DOT in require]
+    return [require.strip() for require in requirements if not HYPEN_E_DOT in require]
 
 
 setup(
