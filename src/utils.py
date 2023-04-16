@@ -50,3 +50,12 @@ def evalute_model(X_train, X_test, y_train, y_test, models) -> pd.DataFrame:
     except Exception as e:
         logging.error('FAILED to Train Model')
         raise CustomException(e, sys)
+    
+
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as obj:
+            return pickle.load(obj)
+    except Exception as e:
+        logging.error('FAILED Load Object')
+        raise CustomException(e, sys)
