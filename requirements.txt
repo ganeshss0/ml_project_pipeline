@@ -1,7 +1,8 @@
 pandas
 numpy
 matplotlib
-numpy
+seaborn
 Flask
 scikit-learn
+Flask-Cors
 -e .
